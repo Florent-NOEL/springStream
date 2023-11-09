@@ -2,7 +2,7 @@ package SpringStream.models;
 
 public class UrlList {
     private static String urlVideoFile ="file:C:/Users/Flo/Documents/wb/videoFile";
-    private static String urlImageFile="C:\\Users\\Flo\\Documents\\wb\\imageFile";
+    private static String urlImageFile="file:C:/Users/Flo/Documents/wb/imageFile";
 
     public static String getUrlVideoFile() {
         return urlVideoFile;

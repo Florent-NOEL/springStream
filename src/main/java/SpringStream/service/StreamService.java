@@ -12,8 +12,13 @@ public class StreamService {
     @Autowired
     private ResourceLoader resourceLoader;
     private static final String File_PATH = UrlList.getUrlVideoFile() +"/%s";
+    private static final String File_Img = UrlList.getUrlImageFile() +"/%s";
 //le title doit être dans le format suivant Title.mp4 Title.webm
     public Mono<Resource> getVideo(String title){
         return  Mono.fromSupplier(()-> resourceLoader.getResource(String.format(File_PATH, title)));
+    }
+
+    public Mono<Resource> getImage(String title){
+        return  Mono.fromSupplier(()-> resourceLoader.getResource(String.format(File_Img, title+"_Image.png")));
     }
 }
